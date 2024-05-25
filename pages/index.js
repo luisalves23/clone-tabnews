@@ -11,20 +11,22 @@ function Home() {
   ];
 
   const listaDePresentes = presentes.map((presente, index) => (
-    <li key={index}>{presente}</li>
+    <li key={index} style={{ fontSize: '1.2em', fontFamily: 'Arial, sans-serif' }}>
+      {presente}
+    </li>
   ));
 
-  const estilo = {
+  const estiloTitulo = {
     textAlign: 'center', // Centralizar o texto
-    fontFamily: 'cursive', // Usar uma fonte cursiva (por exemplo, 'cursive')
+    fontFamily: 'cursive', // Usar uma fonte cursiva para o título
     fontStyle: 'italic', // Definir estilo como itálico
     // Adicione mais estilos conforme necessário
   };
 
   return (
     <div>
-      <h2 style={estilo}>Sugestões de Presente:</h2>
-      <ul style={{ ...estilo, listStyleType: 'none', padding: 0 }}>
+      <h2 style={estiloTitulo}>Sugestões de Presente:</h2>
+      <ul style={{ listStyleType: 'none', padding: 0 }}>
         {listaDePresentes}
       </ul>
     </div>
