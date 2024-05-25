@@ -1,5 +1,8 @@
 import React from 'react';
 
+// Importando a imagem de fundo
+import backgroundImage from './WhatsApp Image 2024-05-25 at 18.53.39.jpeg';
+
 function Home() {
   const categorias = [
     {
@@ -62,19 +65,6 @@ function Home() {
     // Adicione mais categorias conforme necessário
   ];
 
-  const listaDeCategorias = categorias.map((categoria, index) => (
-    <div key={index}>
-      <h2>{categoria.nome}</h2>
-      <ul style={{ listStyleType: 'none', padding: 0 }}>
-        {categoria.presentes.map((presente, i) => (
-          <li key={i} style={{ fontSize: '1.2em', fontFamily: 'Arial, sans-serif' }}>
-            {presente}
-          </li>
-        ))}
-      </ul>
-    </div>
-  ));
-
   const estiloTitulo = {
     textAlign: 'center', // Centralizar o texto
     fontFamily: 'cursive', // Usar uma fonte cursiva para o título
@@ -83,9 +73,27 @@ function Home() {
   };
 
   return (
-    <div>
+    <div style={{ 
+      backgroundImage: `url(${backgroundImage})`, 
+      backgroundSize: 'cover', 
+      backgroundPosition: 'center', 
+      fontFamily: 'Arial, sans-serif', 
+      color: '#333', 
+      padding: '20px' 
+    }}>
       <h1 style={estiloTitulo}>Sugestões de Presente por Categoria:</h1>
-      {listaDeCategorias}
+      {categorias.map((categoria, index) => (
+        <div key={index}>
+          <h2>{categoria.nome}</h2>
+          <ul style={{ listStyleType: 'none', padding: 0 }}>
+            {categoria.presentes.map((presente, i) => (
+              <li key={i} style={{ fontStyle: 'italic', fontSize: '1.2em' }}>
+                {presente}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
   );
 }
