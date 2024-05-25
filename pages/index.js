@@ -1,7 +1,7 @@
 import React from 'react';
+import './Home.css'; // Importando o arquivo CSS onde você definirá a fonte
 
 function Home() {
-  // Array de presentes
   const presentes = [
     'Livros',
     'Flores',
@@ -11,15 +11,14 @@ function Home() {
     // Adicione mais presentes conforme necessário
   ];
 
-  // Mapeie a array de presentes para elementos de lista
   const listaDePresentes = presentes.map((presente, index) => (
     <li key={index}>{presente}</li>
   ));
 
   return (
     <div>
-      <h1>Sugestões de Presente:</h1>
-      <ul>
+      <h1 className="titulo">Sugestões de Presente:</h1>
+      <ul className="lista">
         {listaDePresentes}
       </ul>
     </div>
