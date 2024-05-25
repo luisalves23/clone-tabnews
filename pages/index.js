@@ -1,5 +1,4 @@
 import React from 'react';
-import './Home.css'; // Importando o arquivo CSS onde você definirá a fonte
 
 function Home() {
   const presentes = [
@@ -8,17 +7,21 @@ function Home() {
     'Chocolates',
     'Jóias',
     'Roupas',
-    // Adicione mais presentes conforme necessário
   ];
 
   const listaDePresentes = presentes.map((presente, index) => (
     <li key={index}>{presente}</li>
   ));
 
+  const estilo = {
+    fontFamily: 'cursive', // Aqui você pode definir a fonte manuscrita desejada
+    // Adicione mais estilos conforme necessário
+  };
+
   return (
     <div>
-      <h1 className="titulo">Sugestões de Presente:</h1>
-      <ul className="lista">
+      <h1 style={estilo}>Sugestões de Presente:</h1>
+      <ul style={estilo}>
         {listaDePresentes}
       </ul>
     </div>
