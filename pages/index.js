@@ -1,6 +1,6 @@
 function Home() {
   return (
-    <h1>Site em construção...</h1>;
+    <img src="../imagem.jpg" alt="Descrição da imagem" style="width: 100%;">;
 }
 
 export default Home;
