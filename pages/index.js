@@ -1,8 +1,6 @@
 function Home() {
   return (
-    <div>
-      <img src={`/imagem.png`} alt="Descrição da imagem" style="width: 100%;" />
-    </div>
+    <h1>Ola</h1>
   );
 }
 
